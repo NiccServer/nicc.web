@@ -1,7 +1,70 @@
-<form id="consulta">
-  <select id="escuela"></select>
-  <select id="grado"></select>
-  <button>Consultar</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Consulta de Uniformes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-<div id="resultado"></div>
+  <!-- HEADER -->
+  <header>
+    <h1>Consulta de Uniformes Escolares</h1>
+    <p>Verifica disponibilidad por sucursal</p>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section class="form-section">
+      <h2>Datos del alumno</h2>
+
+      <form id="consultaForm">
+        <label>
+          Institución
+          <select id="escuela" required>
+            <option value="">Selecciona una escuela</option>
+            <option value="Colegio Alpha">Colegio Alpha</option>
+            <option value="Instituto Beta">Instituto Beta</option>
+          </select>
+        </label>
+
+        <label>
+          Nivel
+          <select id="nivel" required>
+            <option value="">Selecciona nivel</option>
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+          </select>
+        </label>
+
+        <label>
+          Grado
+          <select id="grado" required>
+            <option value="">Selecciona grado</option>
+            <option value="1">1°</option>
+            <option value="2">2°</option>
+            <option value="3">3°</option>
+          </select>
+        </label>
+
+        <button type="submit">Consultar disponibilidad</button>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <h2>Resultados</h2>
+      <div id="resultados">
+        <p class="placeholder">Ingresa los datos para ver la disponibilidad.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Uniformes Escolares · Consulta informativa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
